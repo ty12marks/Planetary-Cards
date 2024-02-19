@@ -1,7 +1,33 @@
 ---
-layout: layout.liquid
-title: 11ty Boilerplate
+layout: base.njk
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planetary Playing Cards</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  {% include 'header.njk' %}
+
+  <!-- Main Content Section -->
+  <section class="main-content">
+    <h1>Welcome to the Planetary Playing Cards</h1>
+
+    <!-- Include the planet cards using the partial -->
+    {% include 'planet-card.njk' %}
+  </section>
+
+  <!-- Footer Section -->
+  {% include 'footer.njk' %}
+
+</body>
+
+</html>

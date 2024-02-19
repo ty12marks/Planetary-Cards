@@ -1,22 +1,33 @@
 ---
-title: 11ty Boilerplate
+layout: base.liquid
 ---
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
-  <link rel="stylesheet" href="/styles/screen.css">
+  <title>Planetary Playing Cards</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-  <nav>
-    <ul>
-      <li><a href="/" title="Go home">Home</a></li>
-      <li><a href="/about/" title="About the boilerplate">About</a></li>
-    </ul>
-  </nav>
-    {{ content }}
+
+  <!-- Header Section -->
+  {% include 'header.liquid' %}
+
+  <!-- Main Content Section -->
+  <section class="main-content">
+    <h1>Welcome to the Planetary Playing Cards</h1>
+
+    <!-- Include the planet cards using the partial -->
+    {% include 'planet-card.liquid' %}
+  </section>
+
+  <!-- Footer Section -->
+  {% include 'footer.liquid' %}
+
 </body>
+
 </html>
